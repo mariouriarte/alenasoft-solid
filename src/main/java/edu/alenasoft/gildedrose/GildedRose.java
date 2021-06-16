@@ -23,8 +23,27 @@ public class GildedRose {
     System.out.println(items);
   }
 
+//  public static void updateQuality() {
+//    for (Item item : items) {
+//      decrementSellInItem(item);
+//      updateQualityItem(item);
+//    }
+//  }
+//
+//  private static void updateQualityItem(Item item) {
+//    QualitableFactory qualitableFactory = new QualitableFactory();
+//
+//    Qualitable qualitableItem = qualitableFactory.findQualitableInstance(item);
+//    qualitableItem.updateQuality(item);
+//  }
+//
+//  private static void decrementSellInItem(Item item) {
+//  }
+
+
   public static void updateQuality() {
     for (int i = 0; i < items.size(); i++) {
+      // quality
       if ((!"Aged Brie".equals(items.get(i).getName()))
           && !"Backstage passes to a TAFKAL80ETC concert".equals(items.get(i).getName())) {
         if (items.get(i).getQuality() > 0) {
@@ -52,6 +71,7 @@ public class GildedRose {
         }
       }
 
+      // sellIn
       if (!"Sulfuras, Hand of Ragnaros".equals(items.get(i).getName())) {
         items.get(i).setSellIn(items.get(i).getSellIn() - 1);
       }
