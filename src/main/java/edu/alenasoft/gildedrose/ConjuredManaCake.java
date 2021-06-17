@@ -1,7 +1,7 @@
 package edu.alenasoft.gildedrose;
 
 // item decrementa el doble
-public class ConjuredManaCake implements Qualitable {
+public class ConjuredManaCake extends AbstractQualitable implements Qualitable {
     @Override
     public void updateQuality(Item item) {
         calculateQuality(item);

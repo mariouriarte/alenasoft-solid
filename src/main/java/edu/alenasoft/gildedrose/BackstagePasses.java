@@ -1,6 +1,6 @@
 package edu.alenasoft.gildedrose;
 
-public class BackstagePasses implements Qualitable {
+public class BackstagePasses extends AbstractQualitable implements Qualitable {
     @Override
     public void updateQuality(Item item) {
 
